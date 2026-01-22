@@ -16,7 +16,7 @@ function App() {
           <br />
           <br /> 
           
-          When I'm not coding, you can find me rock climbing, writing, and tinkering with hardware.
+          When I'm not coding, you can find me rock climbing, writing, or tinkering with hardware.
         </p>
       </section>
 

@@ -22,8 +22,7 @@ body {
 }
 
 main {
-  padding-left: 24rem;
-  padding-right: 16rem;
+  padding: 0 18rem;
 
   display: flex;
   flex-direction: column;
