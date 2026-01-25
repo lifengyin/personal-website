@@ -47,9 +47,10 @@ function App() {
       <section id="links">
         <h4>LINKS</h4>
         <p>
-          <a href="mailto:lifeng.yin.07@gmail.com">Email</a>&nbsp;&middot;&nbsp;
-          <a href="https://github.com/lifengyin">GitHub</a>&nbsp;&middot;&nbsp;
-          <a href="https://linkedin.com/in/lifengyin">LinkedIn</a>
+          <a href="mailto:lifeng.yin.07@gmail.com" target="_blank">Email</a>&nbsp;&middot;&nbsp;
+          <a href="https://github.com/lifengyin" target="_blank">GitHub</a>&nbsp;&middot;&nbsp;
+          <a href="https://linkedin.com/in/lifengyin" target="_blank">Linkedin</a>&nbsp;&middot;&nbsp;
+          <a href="https://devpost.com/lifeng-yin" target="_blank">Devpost</a>
         </p>
       </section>
 
