@@ -24,7 +24,7 @@ function App() {
         <h4>PROJECTS</h4>
         <ol>
           <li>
-            <a href="https://github.com/Yourself1011/one-two-red-blue">one-two-red-blue</a>
+            <a href="https://github.com/Yourself1011/onetworedblue">one-two-red-blue</a>
           </li>
           <li>
             <a href="https://github.com/jeffrey-zang/opus">Opus</a>
