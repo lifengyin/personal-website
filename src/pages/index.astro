@@ -1,0 +1,189 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import '@fontsource/commit-mono/200.css';
+import '@fontsource/commit-mono/300.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			* {
+				box-sizing: border-box;
+			  }
+			  
+			  :root {
+				font-size: 14px;
+			  }
+			  
+			  body {
+				margin: 0;
+				height: 100vh;
+			  
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			  
+				font-size: 1rem;
+				line-height: 1.5;
+			  
+				font-family: 'Commit Mono', monospace;
+				background-color: #0f0f0f;
+			  }
+			  
+			  main {
+				padding: 0 18rem;
+			  
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+			  
+				color: #dbdee0;
+			  }
+			  
+			  @media (max-width: 640px) {
+				main {
+				  padding: 5rem;
+				}
+			  }
+			  
+			  @media (max-width: 1024px) {
+				main {
+				  padding: 10rem;
+				  margin-top: 5rem;
+				}
+			  }
+			  
+			  h1 {
+				font-size: 1.5rem;
+				margin: 0;
+			  }
+			  
+			  p {
+				margin: 0;
+			  }
+			  
+			  main h4 {
+				color: #4b505c;
+				font-size: 0.9rem;
+				font-weight: 200;
+				margin-top: 0.1rem;
+				margin-bottom: 0.5rem;
+			  }
+			  
+			  a {
+				color: #dbdee0;
+				background-image:
+				  linear-gradient(to right, #dbdee0, #dbdee0);
+				background-size: 0 1px;
+				background-position: 0 100%;
+				background-repeat: no-repeat;
+				transition: background-size 200ms;
+				text-decoration: none !important;
+			  }
+			  
+			  a:hover {
+				background-size: 100% 1px;
+			  }
+			  
+			  #works ol {
+				margin: 0;
+				list-style: none;
+				padding: 0;
+			  }
+			  
+			  #works ol li {
+				margin-bottom: 0.3rem;
+			  }
+			  
+			  #works ol a {
+				color: #dbdee0;
+				font-weight: 200;
+				text-decoration: none;
+			  }
+			  
+			  #works ol span {
+				color: #4b505c;
+				text-decoration: none;
+			  }
+			  
+			  hr {
+				border: 1px solid #242424;
+				width: 15%;
+				margin: 0;
+			  }
+			  
+			  p#copyright {
+				margin-top: 1rem;
+				font-size: 0.8rem;
+				color: #4b505c;
+			  }
+			  
+			  /* @media (min-width: 768px) {
+				main h4 {
+				  position: absolute;
+				  transform: translateX(calc(-100% - 2rem));
+				}
+			  } */
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Hey, I'm Lifeng</h1>
+			<section id="about">
+			  <h4>ABOUT</h4>
+			  <p>
+				Developer studying Computer Engineering @ UWaterloo, focusing on the intersection of design and code.
+				<br />
+				<br />
+				Driven by the tiny details, I strive to build projects that are both functional and beautiful. Having attended 10+ hackathons, I've come to love the creative process of building things from scratch.
+				<br />
+				<br /> 
+				
+				When I'm not coding, you can find me rock climbing, writing, or tinkering with hardware.
+			  </p>
+			</section>
+	  
+			<section id="works">
+			  <h4>PROJECTS</h4>
+			  <ol>
+				<li>
+				  <a href="https://github.com/Yourself1011/onetworedblue">one-two-red-blue</a>
+				</li>
+				<li>
+				  <a href="https://github.com/jeffrey-zang/opus">Opus</a>
+				</li>
+				<li>
+				  <a href="https://github.com/lifeng-yin/mathworkit">Mathworkit</a>
+				</li>
+				<li>
+				  <a href="https://github.com/RythmHacks/dash.rythmhacks.ca">RythmHacks</a>
+				</li>
+				<li>
+				  <a href="https://github.com/Yourself1011/memento">Memento</a>
+				</li>
+				<li>
+				  <a href="https://github.com/lifeng-yin/cultivate">Cultivate</a>
+				</li>
+			  </ol>
+			</section>
+	  
+			<section id="links">
+			  <h4>LINKS</h4>
+			  <p>
+				<a href="mailto:lifeng.yin.07@gmail.com" target="_blank">Email</a>&nbsp;&middot;
+				<a href="https://github.com/lifengyin" target="_blank">GitHub</a>&nbsp;&middot;
+				<a href="https://linkedin.com/in/lifengyin" target="_blank">Linkedin</a>&nbsp;&middot;
+				<a href="https://devpost.com/lifeng-yin" target="_blank">Devpost</a>
+			  </p>
+			</section>
+	  
+			<section>
+			  <hr />
+			  <p id="copyright">© Copyright {new Date().getFullYear()} Lifeng Yin. All rights reserved.</p>
+			</section>
+		  </main>
+	</body>
+</html>

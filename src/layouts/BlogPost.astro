@@ -1,0 +1,112 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			@import './BlogPost.css';
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+				padding-top: 4rem;
+			}
+			.hero-image {
+				width: 100%;
+			}
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+			}
+			.prose {
+				width: 850px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0.5em 0 0.25em 0;
+				font-size: 3rem;
+			}
+			.date {
+				margin-bottom: 1em;
+				color: rgb(var(--gray));
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+			.back-to-portfolio {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+			}
+			.back-to-portfolio-icon {
+				width: 20px;
+				height: 20px;
+				fill: #666666;
+			}
+			.back-to-portfolio-text {
+				display: inline-block;
+				font-size: 1rem;
+				margin: 0.1rem 0 0 0;
+				color: #666666;
+				transition: color 0.2s ease;
+			}
+			.back-to-portfolio-text:hover {
+				color: #121212;
+			}
+		</style>
+	</head>
+
+	<body>
+		<main>
+			<article>
+				<div class="hero-image">
+					{heroImage && <Image width={850} height={510} src={heroImage} alt="" />}
+				</div>
+				<div class="prose">
+					<div class="title">
+						
+						<h1>{title}</h1>
+						<div class="date">
+							<FormattedDate date={pubDate} />
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+							&nbsp;-&nbsp; 10 min read
+						</div>
+						<hr />
+					</div>
+					<slot />
+					<div class="back-to-portfolio">
+						<svg class="back-to-portfolio-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M232,200a8,8,0,0,1-16,0,88.1,88.1,0,0,0-88-88H51.31l34.35,34.34a8,8,0,0,1-11.32,11.32l-48-48a8,8,0,0,1,0-11.32l48-48A8,8,0,0,1,85.66,61.66L51.31,96H128A104.11,104.11,0,0,1,232,200Z"></path></svg>
+						<a class="back-to-portfolio-text" href="/">Back to portfolio</a>
+					</div>
+				</div>
+			</article>
+			
+		</main>	
+	</body>
+</html>
