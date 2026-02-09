@@ -15,8 +15,8 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<meta property="og:image" content={post.data.heroImage?.src} />
-<meta property="twitter:image" content={post.data.heroImage?.src} />
+<meta property="og:image" content={new URL(post.data.heroImage?.src || '', Astro.site)} />
+<meta property="twitter:image" content={new URL(post.data.heroImage?.src || '', Astro.site)} />
 
 <BlogPost {...post.data}>
 	<Content />
