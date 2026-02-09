@@ -1,14 +1,14 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     :root {
-      --bg-color: #0F0F0F;
-      --text-color: #DBDEE0;
+      --bg-color: #DBDEE0;
+      --text-color: #0F0F0F;
     }
     
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg-color: #DBDEE0;
-        --text-color: #0F0F0F;
+        --bg-color: #0F0F0F;
+        --text-color: #DBDEE0;
       }
     }
     
@@ -20,7 +20,7 @@
       fill: var(--text-color);
     }
   </style>
-  <rect width="100" height="100" rx="15" ry="15" fill="var(--bg-color)"/>
+  <rect width="100" height="100" fill="var(--bg-color)"/>
   <path d="M54.6811 70.5392V46.1501H46.7405V39.911H54.6811V39.5139C54.6811 31.9703 58.4813 28 65.7413 28C68.0668 28 70.2788 28.397 71.9804 29.1911V34.863C70.3355 34.1256 68.634 33.7853 67.0458 33.7853C63.3024 33.7853 61.4874 35.6571 61.4874 39.5139V39.911H71.4132V46.1501H61.4874V70.5392H54.6811Z" fill="var(--text-color)"/>
   <path d="M15 70.5392V30.8359H22.0899V64.3001H38.3682V70.5392H15Z" fill="var(--text-color)"/>
   <path d="M75.9931 66.0625C75.9931 63.2711 78.2052 61.0591 80.9966 61.0591C83.788 61.0591 86 63.2711 86 66.0625C86 68.8539 83.788 71.0659 80.9966 71.0659C78.2052 71.0659 75.9931 68.8539 75.9931 66.0625Z" fill="var(--text-color)"/>

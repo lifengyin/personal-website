@@ -5,12 +5,89 @@ pubDate: 'Feb 8 2026'
 heroImage: '../../assets/blog-htn-frontend-challenge.svg'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+👋 Hey, Hack the North Team! 
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+This document outlines the brainstorming, code architecture, and some general thoughts surrounding my submission for the Frontend Challenge. I'd be happy to discuss anything I might have missed in a further interview! (should I recieve one, haha).
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Live demo: https://hack-global-schedule.vercel.app.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+# Development Process
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## Wireframing
+
+![Hack the North schedule app wireframes: grid/card view, timeline, event details modal, graph view concept,    and login page](../../assets/wireframes.jpeg)
+
+Before I code anything, I prefer to write down all of my thoughts and plans in my head onto one of my favourite mediums - pencil and paper.
+
+Here, I've outlined several of the pages I planned to make. Spoiler alert - not all of them get to be finished. It at least helped me record all of my ideas, as well as get a sense of what I should prioritize.
+
+## Tech Stack
+
+### Main technologies
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![Base UI](https://img.shields.io/badge/Base%20UI-000000?style=for-the-badge)
+
+
+In past projects, I normally use this stack, except with Tailwind instead of styled-components. In this project, I wanted to try something new - not just because Hack the North uses (?) it, but because I thought pure CSS might be more useful for dynamic styling.
+
+This was also my first time trying out base-ui. I found it to be pretty straightforward to use, having used both Radix and shadcn/ui before. I chose it particularly because it was unstyled, which allows me to have more design freedom and not deal with overriding classes.
+
+### Other technologies
+- **Wouter** - for simple routing, as opposed to using the more complex React Router
+- **react-local-storage** - to simplify using local storage with states
+- **microfuzz** - a simple searching library that is smaller than Fuse.js, and works just as well
+- **boring-avatars** - cute library for making avatars! unfortunately only used it once in the entire codebase...
+
+### AI???
+
+I must confess, Generative AI has gotten more and more enticing to use lately. In this project, I used Cursor (both tab and agents). I found Cursor-tab to be more reliable (mostly for simple tasks like updating imports). Cursor Agents was more powerful, as it could create entire components. I made sure all of the code it wrote was clean and made sense.
+
+It did seem to struggle a bit with base-ui (which is new and it's likely not familiar with it). Overall, I did see my productivity increase a bit using it.
+
+
+# Future Extensions
+## Theming
+
+I did create a themeProvider component near the start of the project, but I later forgot about it and did not end up using it. Now, my codebase is littered with a bunch of different hex codes that makes for horrible consistency. A future extension would be to actually use the themeProvider. As well, it would make a light mode toggle very seamless.
+
+## Features
+
+As seen in my wireframe, there were a bunch of features that I did not have time to implement. These included a bookmark feature, a timeline view, and even a graph-view to see related events. While the grid view is sufficient to view all of the data, adding these features would allow hackers to see the data in a completey different way.
+
+### Concept: bookmark system
+- Allows users to save and reorder events that they are interested in
+- Similar to a "Favourites" feature in many social media apps
+- User clicks a button in the top-right corner of an image, and the bookmark is filled with colour (green)
+- The user can then view the bookmarked items on a separate page (grid view)
+- Reordering would have been done with [motion.dev](https://motion.dev/docs/react-reorder) (which was formerly Framer-motion)
+- The order of bookmarked events would then be saved after every reorder
+
+## Performance
+
+![Lighthouse report, with 78 performance.](../../assets/lighthouse.png)
+I actually ran a Lighthouse report after finishing the code, and the performance result was particularly disappointing (78/100). I didn't really think to optimize speed that much as it felt snappy on my laptop. However, Lighthouse does point out some relatively simple optimizations that would (hopefully) boost the performance significantly if implemented.
+
+# Areas of Pride
+
+## Accessibility, Best Practices, SEO
+
+As shown in the Lighthouse report, I did pretty well in the other areas that it measures. While I'm sure that a couple more `aria-role` attributes can be added, I'm confident that the app as it is excellent in terms of these criteria.
+
+
+## Responsive Design
+
+I couldn't exactly get the search bar and dropdowns to be exactly optimized for mobile in time; however, I'm proud of how responsive the sidebar as well as the grid view is for any screen size. CSS Flexbox was particularly useful for making the grid responsive.
+
+## Code maintainability
+
+The file structure was inspired by Brad Frost's [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/) methodology. While it is simplified since this project doesn't have too much files, I found that it worked well to keep my code DRY and my files organized. 
+
+Componentization was prioritized heavily - I tried to break down most components that were over 200 lines of code. Hooks and utils were also used. However, this was mostly done after coding them first in one big file (for example, Dashboard.tsx). I found that coding before organizing helped with developer speed and made for some intuitive organization at the end.
+
+## Login System
+
+Even though it was a mock account system, it still took me surprisingly long to build and style the login page. I added validation, redirects, a working logout button, and anything else I could think of. Even finding the Mr. Goose photo also took a long time (because I couldn't find any of myself in the Hack the North photos...) 
+
+There is one issue that I didn't catch: users aren't able to view events until they are logged in. This would have been a simple fix - display the schedule along with a Login button on the main page. Although, users are still able to access the private_events by calling the API...
+
+Nevertheless, the final result does happen to be the prettiest login page that I have created!
