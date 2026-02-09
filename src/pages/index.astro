@@ -34,7 +34,8 @@ import '@fontsource/commit-mono/300.css';
 			  }
 			  
 			  main {
-				padding: 0 18rem;
+				padding: 0 20%;
+				max-height: 100vh;
 			  
 				display: flex;
 				flex-direction: column;
@@ -43,16 +44,22 @@ import '@fontsource/commit-mono/300.css';
 				color: #dbdee0;
 			  }
 			  
-			  @media (max-width: 640px) {
+			  @media (max-width: 480px) {
 				main {
-				  padding: 5rem;
+				  padding-top: 5rem;
 				}
+
+				p#copyright {
+					margin-bottom: 5rem;
+				}
+				/* body {
+					padding-bottom: 150rem;
+				} */
 			  }
 			  
 			  @media (max-width: 1024px) {
 				main {
-				  padding: 10rem;
-				  margin-top: 5rem;
+				  /* padding-top: 5rem; */
 				}
 			  }
 			  
